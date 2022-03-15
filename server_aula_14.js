@@ -1,4 +1,4 @@
-/* EXERCICIO 04 - RESPOSTA DE ACORDO COM AS CONDICIONAIS E CRITERIOS SELECIONADOS*/
+/* EXERCICIO 04 - RESPOSTA DE ACORDO COM AS CONDICIONAIS E CRITERIOS SELECIONADOS */
 
 const http = require('http');   // buscando biblioteca nativa do Nodejs com funcoes de http
 const url = require('url');     // buscando biblioteca nativa do Nodejs com funcoes de url
