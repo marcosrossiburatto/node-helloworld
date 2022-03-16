@@ -6,7 +6,7 @@
       3. Pode ser usada as 03 torres durante as transferências
 */
 
-const tempoEspera = 10000;   // Guarda na memoria o valor do tempo de espera entre as mudanças
+const tempoEspera = 3000;   // Guarda na memoria o valor do tempo de espera entre as mudanças
 const disco_00 = 0;         // Valor atribuido ao disco 0 (não está presente na torre)
 const disco_01 = 1;         // Valor atribuido ao disco 1
 const disco_02 = 2;         // Valor atribuido ao disco 2
@@ -46,291 +46,172 @@ function syncDelay(milliseconds){           // Criando uma função de tempo par
     }
 }
 
-syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 01
+function consoleLog() {           // Chama uma função para mostrar os dados especificados
+    console.log();
+    console.log(hanoi[0]);        // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
+    console.log();
+    console.log(hanoi[1]);        // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
+    console.log();
+    console.log(hanoi[2]);        // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
+    console.log();
+}
 
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 01
 hanoi[0].discos[0] = disco_00;    // Mudança nas Torres A e B - Nova Situação da Torre A - posição 0 (topo) está sem o disco 1
 hanoi[1].discos[4] = disco_01;    //                            Nova Situação da Torre B - posição 4 (mais baixo) está com o disco 1
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 02
-
 hanoi[0].discos[1] = disco_00;    // Mudança nas Torres A e C - Nova Situação da Torre A - posição 1 está sem o disco 2 
 hanoi[2].discos[4] = disco_02;    //                            Nova Situação da Torre C - posição 4 (mais baixo) está com o disco 2
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 03
-
 hanoi[1].discos[4] = disco_00;    // Mudança nas Torres B e C - Nova Situação da Torre B - todas posicoes vazias 
 hanoi[2].discos[3] = disco_01;    //                            Nova Situação da Torre C - posição 3 está com o disco 1
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 04
-
 hanoi[0].discos[2] = disco_00;    // Mudança nas Torres A e B - Nova Situação da Torre A - posicao 2 está sem o disco 3 
 hanoi[1].discos[4] = disco_03;    //                            Nova Situação da Torre B - posição 4 está com o disco 3
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 05
-
 hanoi[0].discos[2] = disco_01;    // Mudança nas Torres A e c - Nova Situação da Torre A - posicao 2 está sem o disco 1  
 hanoi[2].discos[3] = disco_00;    //                            Nova Situação da Torre C - posição 3 está sem disco 
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 06
-
 hanoi[1].discos[3] = disco_02;    // Mudança nas Torres B e C - Nova Situação da Torre  - posicao 3 está com o disco 2  
 hanoi[2].discos[4] = disco_00;    //                            Nova Situação da Torre  - posição 4 está sem o disco 
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 07
-
 hanoi[0].discos[2] = disco_00;    // Mudança nas Torres A e B - Nova Situação da Torre A - posicao 2 está sem o disco  
 hanoi[1].discos[2] = disco_01;    //                            Nova Situação da Torre B - posição 2 está com o disco 1
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 08
-
 hanoi[0].discos[3] = disco_00;    // Mudança nas Torres A e C - Nova Situação da Torre A - posicao 3 está sem o disco  
 hanoi[2].discos[4] = disco_04;    //                            Nova Situação da Torre C- posição 4 está com o disco 4
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 09
-
 hanoi[1].discos[2] = disco_00;    // Mudança nas Torres B e C - Nova Situação da Torre B - posicao 2 está sem o disco  
 hanoi[2].discos[3] = disco_01;    //                            Nova Situação da Torre C - posição 3 está com o disco 1
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 10
-
 hanoi[0].discos[3] = disco_02;    // Mudança nas Torres A e B - Nova Situação da Torre A - posicao 3 está sem o disco 2
 hanoi[1].discos[3] = disco_00;    //                            Nova Situação da Torre B - posição 3 está sem o disco 
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 11
-
 hanoi[0].discos[2] = disco_01;    // Mudança nas Torres A e C - Nova Situação da Torre A - posicao 2 está com o disco 1
 hanoi[2].discos[3] = disco_00;    //                            Nova Situação da Torre C - posição 3 está com o disco 0
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 12
-
 hanoi[1].discos[4] = disco_00;    // Mudança nas Torres B e C - Nova Situação da Torre B - posicao 4 está com o disco 0
 hanoi[2].discos[3] = disco_03;    //                            Nova Situação da Torre C - posição 3 está com o disco 3
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 13
-
 hanoi[0].discos[2] = disco_00;    // Mudança nas Torres A e B - Nova Situação da Torre A - posicao 2 está com o disco 0
 hanoi[1].discos[4] = disco_01;    //                            Nova Situação da Torre B - posição 4 está com o disco 1
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 14
-
 hanoi[0].discos[3] = disco_00;    // Mudança nas Torres A e C - Nova Situação da Torre A - posicao 3 está com o disco 0
 hanoi[2].discos[2] = disco_02;    //                            Nova Situação da Torre C - posição 2 está com o disco 2
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 15
-
 hanoi[1].discos[4] = disco_00;    // Mudança nas Torres B e C - Nova Situação da Torre B - posicao 4 está com o disco 0
 hanoi[2].discos[1] = disco_01;    //                            Nova Situação da Torre C - posição 1 está com o disco 1
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 16
-
 hanoi[0].discos[4] = disco_00;    // Mudança nas Torres A e B - Nova Situação da Torre A - posicao 4 está com o disco 0
 hanoi[1].discos[4] = disco_05;    //                            Nova Situação da Torre B - posição 4 está com o disco 5
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 17
-
 hanoi[0].discos[4] = disco_01;    // Mudança nas Torres A e C - Nova Situação da Torre A - posicao 4 está com o disco 1
 hanoi[2].discos[1] = disco_00;    //                            Nova Situação da Torre C - posição 1 está com o disco 0
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 18
-
 hanoi[1].discos[3] = disco_02;    // Mudança nas Torres A e C - Nova Situação da Torre A - posicao 3 está com o disco 2
 hanoi[2].discos[2] = disco_00;    //                            Nova Situação da Torre C - posição 2 está com o disco 0
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 19
-
 hanoi[0].discos[4] = disco_00;    // Mudança nas Torres A e B - Nova Situação da Torre A - posicao 4 está com o disco 0
 hanoi[1].discos[2] = disco_01;    //                            Nova Situação da Torre B - posição 2 está com o disco 1
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 20
-
 hanoi[0].discos[4] = disco_03;    // Mudança nas Torres A e C - Nova Situação da Torre A - posicao 4 está com o disco 2 
 hanoi[2].discos[3] = disco_00;    //                            Nova Situação da Torre C - posição 3 está com o disco 0 
-
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+consoleLog();                     // Chama a função consoleLog
 
 syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 21
-
 hanoi[1].discos[2] = disco_00;    // Mudança nas Torres B e C - Nova Situação da Torre B - posicao 2 está com o disco 0
 hanoi[2].discos[3] = disco_01;    //                            Nova Situação da Torre C - posição 3 está com o disco 1
+consoleLog();                     // Chama a função consoleLog
 
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 22
+hanoi[1].discos[3] = disco_00;    // Mudança nas Torres B e A - Nova Situação da Torre B - posicao 3 está com o disco 0
+hanoi[0].discos[3] = disco_02;    //                            Nova Situação da Torre A - posição 3 está com o disco 2
+consoleLog();                     // Chama a função consoleLog
 
-syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 23
+hanoi[2].discos[3] = disco_00;    // Mudança nas Torres C e A - Nova Situação da Torre C - posicao 3 está com o disco 0
+hanoi[0].discos[2] = disco_01;    //                            Nova Situação da Torre A - posição 2 está com o disco 1
+consoleLog();                     // Chama a função consoleLog
 
-/*hanoi[].discos[] = disco_0;    // Mudança nas Torres  e  - Nova Situação da Torre  - posicao  está com o disco 
-hanoi[].discos[] = disco_0;    //                            Nova Situação da Torre  - posição  está com o disco 
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 24
+hanoi[2].discos[4] = disco_00;    // Mudança nas Torres C e B - Nova Situação da Torre C - posicao 4 está com o disco 0
+hanoi[1].discos[3] = disco_04;    //                            Nova Situação da Torre B - posição 3 está com o disco 4
+consoleLog();                     // Chama a função consoleLog
 
-console.log();
-console.log(hanoi[0]);            // mostra todos os dados do primeiro registro da variavel 'hanoi' (indice 0)
-console.log();
-console.log(hanoi[1]);            // mostra todos os dados do segundo registro da variavel 'hanoi' (indice 1)
-console.log();
-console.log(hanoi[2]);            // mostra todos os dados do terceiro registro da variavel 'hanoi' (indice 2)
-console.log();*/
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 25
+hanoi[1].discos[2] = disco_01;    // Mudança nas Torres B e A - Nova Situação da Torre B - posicao 2 está com o disco 1
+hanoi[0].discos[2] = disco_00;    //                            Nova Situação da Torre A - posição 2 está com o disco 0
+consoleLog();                     // Chama a função consoleLog
+
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 26
+hanoi[2].discos[4] = disco_02;    // Mudança nas Torres C e A - Nova Situação da Torre C - posicao 4 está com o disco 2 
+hanoi[0].discos[3] = disco_00;    //                            Nova Situação da Torre A - posição 3 está com o disco 0
+consoleLog();                     // Chama a função consoleLog
+
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 27
+hanoi[1].discos[2] = disco_00;    // Mudança nas Torres B e C - Nova Situação da Torre B - posicao 2 está com o disco 0
+hanoi[2].discos[3] = disco_01;    //                            Nova Situação da Torre C - posição 3 está com o disco 1
+consoleLog();                     // Chama a função consoleLog
+
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 28
+hanoi[0].discos[4] = disco_00;    // Mudança nas Torres A e B - Nova Situação da Torre A - posicao 4 está com o disco 0 
+hanoi[1].discos[2] = disco_03;    //                            Nova Situação da Torre B - posição 2 está com o disco 3
+consoleLog();                     // Chama a função consoleLog
+
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 29
+hanoi[0].discos[4] = disco_01;    // Mudança nas Torres A e C - Nova Situação da Torre A - posicao 4 está com o disco 1
+hanoi[2].discos[3] = disco_00;    //                            Nova Situação da Torre C - posição 3 está com o disco 0
+consoleLog();                     // Chama a função consoleLog
+
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 30
+hanoi[2].discos[4] = disco_00;    // Mudança nas Torres C e B - Nova Situação da Torre C - posicao 4 está com o disco 0
+hanoi[1].discos[1] = disco_02;    //                            Nova Situação da Torre B - posição 1 está com o disco 2
+consoleLog();                     // Chama a função consoleLog
+
+syncDelay(tempoEspera);           // Chamando a função tempo de espera - apresentar mudanca 31
+hanoi[0].discos[4] = disco_00;    // Mudança nas Torres A e B - Nova Situação da Torre A - posicao 4 está com o disco 0
+hanoi[1].discos[0] = disco_01;    //                            Nova Situação da Torre B - posição 0 está com o disco 1
+consoleLog();                     // Chama a função consoleLog
+
+
 
 
 
@@ -338,11 +219,6 @@ console.log();*/
 
 
 console.log('A partir deste ponto, vamos mostrar as mudanças');
-
-
-
-
-
 
 
 
@@ -375,32 +251,6 @@ if (mediaAluno1 < media) {             // Faz o teste se a média é maior ou ig
 
 console.log(statusAluno1);             // Mostra a situação do Aluno1 no terminal
 
-
-// Fazendo os cálculos para o Aluno 2
-console.log(aluno2.nome);                // mostra o valor da variavel nome do aluno2
-console.log(aluno2.disciplina);          // mostra o valor da variavel disciplina do aluno2
-console.log(aluno2.notas);               // mostra o valor da variavel nota do aluno2
-
-console.log(aluno2.notas[0]);            // mostra o valor da variavel primeira nota do aluno2
-console.log(aluno2.notas[1]);            // mostra o valor da variavel segunda nota do aluno2
-console.log(aluno2.notas[2]);            // mostra o valor da variavel terceira nota do aluno2
-console.log(aluno2.notas[3]);            // mostra o valor da variavel quarta nota do aluno2
-
-const somaNotasAluno2 = aluno2.notas[0] + aluno2.notas[1] + aluno2.notas[2] + aluno2.notas[3]      // coloca na variavel somaNotasAluno2 a soma das notas do aluno 2
-console.log(somaNotasAluno2);                                                                      // mostra o valor da variavel somaNotasAluno2 a soma das notas do aluno 2
-
-const mediaAluno2 = somaNotasAluno2 / 4            // coloca na variavel mediaAluno1 a soma das notas do aluno 2 dividido por 4 notas
-console.log('Média aluno 2: ' + mediaAluno2);      // mostra o valor da variavel mediaAluno2 referente ao aluno 2
-
-var statusAluno2 = '????';             // Cria uma variavel com o nome statusAluno2 e valor arbitrario (???)
-
-if (mediaAluno2 < media) {             // Faz o teste se a média é maior ou igual a 7
-    statusAluno2 = 'Reprovado';        // Se não for, reprova
-} else {
-    statusAluno2 = 'Aprovado';         // Se for, aprova.
-};
-
-console.log(statusAluno2);             // Mostra a situação do Aluno2 no terminal
 
 
 // Mostrando a situação dos alunos
