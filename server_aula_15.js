@@ -9,6 +9,76 @@
          Se Média Final < 7, Status = Reprovado, senão, Status = Aprovado
 */
 
+/* Rotina Tiago na aula 17 */
+
+const sala = [
+    aluno = {
+        nome: "Tiago dos Santos",
+        disciplina: "Matemática",
+        notas: [ 6.5, 4.3, 7.1, 5.0]
+    },
+    aluno = {
+        nome: "Alex Carneiro",
+        disciplina: "Matemática",
+        notas: [ 7.5, 8.3, 9.1, 10.0]
+    }
+];
+
+for (let index = 0; index < sala.length; index++) {
+    // var aprovado = false;
+    var aluno = sala[index];
+    var somaDasNotas = 0;
+
+    for (let indexNota = 0; indexNota < aluno.notas.length; indexNota++) {
+        somaDasNotas += aluno.notas[indexNota];
+    }
+    var mediaAluno = somaDasNotas / 4;
+
+    //aprovado = mediaAluno >= 6;      // pode ser tb var statusAluno = mediaAluno >= 6 ? "Aprovado" : "Reprovado"
+
+    console.log(`Aluno: ${aluno.nome} - ${aluno.disciplina} - Média final: ${mediaAluno} - Status: ${mediaAluno >= 6 ? "Aprovado" : "Reprovado"}`); 
+}
+
+
+/* Rotina Marcos
+
+const classe = [
+    aluno = {
+        nome: "Tiago dos Santos",
+        disciplina: "Matemática",
+        notas: [ 6.5, 4.3, 6.1, 7.0]
+    },
+    aluno = {
+        nome: "Alex Carneiro",
+        disciplina: "Matemática",
+        notas: [ 7.5, 8.3, 9.1, 10.0]
+    },
+    aluno = {
+        nome: "Marcos Buratto",
+        disciplina: "Matemática",
+        notas: [ 7.0, 8.1, 9.5, 9.0]
+    },
+];
+
+for (let i = 0; i < classe.length; i++){
+    let soma = 0;
+    let media = 0;
+    let notas;
+    for (let a = 0; a < classe[i].notas.length; a++) {
+        notas = classe[i].notas[a];
+        soma += notas;
+        media = (soma / classe[i].notas.length).toFixed(2);
+    }
+
+    if (media >= 6) {
+        console.log(`Aluno: ${classe[i].nome} - ${classe[i].disciplina} - Média final: ${media} - Status: Aprovado`); 
+    } else {
+        console.log(`Aluno: ${classe[i].nome} - ${classe[i].disciplina} - Média final: ${media} - Status: Reprovado`); 
+    }
+}*/
+
+
+/* Rotina feita durante a aula 15 
 
 const media = 7;                         // Guarda na memoria o valor limite da aprovacao - utilizado a variavel constante, devido o valor ser fixo
 
@@ -96,3 +166,98 @@ console.log(`Aluno: ${aluno1.nome} - Disciplina: ${aluno1.disciplina} - Média F
 console.log()                                                                                                                       // Linha vazia
 console.log(`Aluno: ${aluno2.nome} - Disciplina: ${aluno2.disciplina} - Média Final: ${mediaAluno2} - Status: ${statusAluno2}`);    // Mostra a situação do Aluno2 no terminal com os dados
 console.log()                                                                                                                       // Linha vazia
+*/
+
+
+/* Rotina do aluno Thalles Diógenes - Funciona para N Alunos e N notas
+
+const listaAlunos = [  
+        {
+        nome: "Tiago dos Santos",
+        disciplina: "Matemática",
+        notas: [ 6.5, 4.3, 7.1, 9.0]
+    },
+    {
+        nome: "Alex Carneiro",
+        disciplina: "Matemática",
+        notas: [ 7.5, 8.3, 9.1, 10.0]
+    }
+];
+
+for (let i = 0; i < listaAlunos.length; i++){
+    let soma = 0;
+    let media;
+    for (let j = 0; j < listaAlunos[i].notas.length; j++) {
+        let nota = listaAlunos[i].notas[j];
+        soma += nota;
+        media = soma / listaAlunos[i].notas.length;
+    }
+
+    if (media >= 6) {
+        console.log(`Aluno: ${listaAlunos[i].nome} - ${listaAlunos[i].disciplina} - Média final: ${media} - Status: Aprovado!`); 
+    } else {
+        console.log(`Aluno: ${listaAlunos[i].nome} - ${listaAlunos[i].disciplina} - Média final: ${media} - Status: Reprovado!`); 
+    }
+} */
+
+
+/* Rotina do aluno Carlos Funciona para N Alunos e 4 notas
+
+var sala = [  
+        aluno = {
+                nome: "Tiago dos Santos",
+                disciplina: "Matemática",
+                notas: [ 6.5, 4.3, 7.1, 4.0]
+                },
+        aluno = {
+                nome: "Alex Carneiro",
+                disciplina: "Matemática",
+                notas: [ 7.5, 8.3, 9.1, 10.0]
+                }
+           ];
+
+for (let i = 0; i < sala.length; i++){
+        let media = (sala[i].notas[0] + sala[i].notas[1] + sala[i].notas[2] + sala[i].notas[3])/4;
+
+        //let status = media<6 ? "Reprovado" : "Aprovado";
+        console.log(`Aluno: ${sala[i].nome} - ${sala[i].disciplina} - Média final: ${media} - Status: ${media < 6 ? "Reprovado" : "Aprovado!"}`); 
+        media = 0;
+    } 
+    */
+
+
+/* Rotina do aluno Leopoldo Barbato - Funciona para N Alunos e N notas
+
+const mediaDeCorte = 6;
+
+const herois = [  
+    aluno = {
+        nome: "Tiago dos Santos",
+        disciplina: "Matemática",
+        notas: [6.5, 4.3, 6.1, 6.0]
+    },
+    aluno = {
+        nome: "Alex Carneiro",
+        disciplina: "Matemática",
+        notas: [ 7.5, 8.3, 9.1, 10.0]
+    }
+];
+
+for (let h = 0; h < herois.length; h++){
+    let soma = 0;
+    let media = 0;
+    for (let n = 0; n < herois[h].notas.length; n++){
+        let nota = herois[h].notas[n];
+        soma += nota;
+        media = soma / herois[h].notas.length;
+    }
+
+    let status = "Indefinido";
+    if (media < mediaDeCorte) {
+        status = "Reprovado"
+    } else {
+        status = "Aprovado"
+    }
+    console.log(`--------- \r\nAluno: ${herois[h].nome} - Disciplina: ${herois[h].disciplina} - Média Final: ${media} - Condição: ${status}\r\n---------`)
+}
+*/
