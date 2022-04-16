@@ -16,7 +16,7 @@ const server = http.createServer((requisicao, resposta) => {       // Analisando
      resposta.setHeader('Content-Type', 'text/plain');                                    // estabelece o tipo de variavel
      resposta.end(`Tchau`);                                                               // mostra a resposta na tela
      return;
-  }  else if (requisicao.url.startsWith('/hello')) {
+  }  else if (requisicao.url.startsWith('/hello') == true || requisicao.url.startsWith('/ola')) {
      resposta.statusCode = 200;                                                           // Sinaliza que a resposta do servidor eh OK!
      resposta.setHeader('Content-Type', 'text/plain');                                    // estabelece o tipo de variavel
      resposta.end(`Hello ${parametrosConsulta.nome} ${parametrosConsulta.sobrenome}`);    // mostra a resposta na tela
